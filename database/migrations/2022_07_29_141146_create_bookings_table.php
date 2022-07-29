@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('client_id')->nullable();
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->date('booked_on');
+            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('product_id')->references('id')->on('products');
             $table->timestamps();
         });
     }
