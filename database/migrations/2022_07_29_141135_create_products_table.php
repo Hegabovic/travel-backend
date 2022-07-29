@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title')->unique();
             $table->string('type');
             $table->string('description');
+            $table->unsignedBigInteger('purchasing_number')->default(0);
             $table->unsignedBigInteger('capacity');
             $table->timestamps();
         });
