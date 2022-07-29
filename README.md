@@ -10,6 +10,7 @@
 ## Table of contents
 
 - [Overview](#overview)
+    - [ER Diagram](#screenshot)
     - [API Requests](#screenshot)
 - [My process](#my-process)
     - [Built with](#built-with)
@@ -19,6 +20,12 @@
 ## Overview
 
 this is a solution for A tour company has a range of products. Excursions, Custom Packages, Cruises and Transfers.
+
+### ER Diagram
+
+#### ER diagram for the required system
+![index-gif](./docs/ER_diagram.png)
+
 
 ### API Requests
 #### Booking: index method: Will return all bookings in the system
