@@ -16,7 +16,7 @@ use App\Http\Controllers\Api\V1\ProductController;
 |
 */
 
-Route::get('bookProduct/{product_id}', [ProductController::class, 'bookProduct']);
+Route::post('bookProduct/{product_id}', [ProductController::class, 'bookProduct']);
 
 Route::get('bookings', [BookingController::class, 'index']);
 

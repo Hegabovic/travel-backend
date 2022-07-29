@@ -16,17 +16,19 @@ class ProductController extends Controller
     /**
      * @param $product_id
      * @param Request $request
-
+     * @return Response|string|Application|ResponseFactory
      * @author Abdullah Hegab
      */
-    public function bookProduct($product_id, Request $request)
+    public function bookProduct($product_id, Request $request): Response|string|Application|ResponseFactory
     {
         $productId = $product_id;
         $clientId = $request->client_id;
 
         $selectedProduct = Product::where('id', $productId)->get()->first();
 
-        if(!$selectedProduct) {return "please enter a valid product id";}
+        if (!$selectedProduct) {
+            return "please enter a valid product id";
+        }
 
         if ($selectedProduct->purchasing_number < $selectedProduct->capacity) {
             Booking::create([
@@ -40,7 +42,7 @@ class ProductController extends Controller
             return response([
                 'message' => "product has been booked successfully",
                 "data" => new ProductsResource($selectedProduct),
-                ],200);
+            ], 200);
         } else {
             Product::where('id', $selectedProduct->id)->update([
                 "is_available" => false,

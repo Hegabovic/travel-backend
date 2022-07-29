@@ -13,19 +13,19 @@ use Illuminate\Http\Response;
 class BookingController extends Controller
 {
     /**
+     * @return Response|Application|ResponseFactory
      * @author Abdullah Hegab
-//     * @return Response|Application|ResponseFactory
      */
-    public function index()
+    public function index(): Response|Application|ResponseFactory
     {
         $bookings = Booking::all();
-        if(count($bookings)){
-            return response(BookingsResource::collection($bookings),200);
+        if (count($bookings)) {
+            return response(BookingsResource::collection($bookings), 200);
 
-        }else{
+        } else {
             return response([
                 "message" => "we don't have any booked products yet"
-            ],404);
+            ], 404);
         }
     }
 }

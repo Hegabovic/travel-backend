@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Booking extends Model
 {
     use HasFactory;
-    protected $fillable=[
+
+    protected $fillable = [
         'id',
         'client_id',
         'product_id',
