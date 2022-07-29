@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Booking extends Model
 {
@@ -13,6 +14,23 @@ class Booking extends Model
         'client_id',
         'product_id',
         'booked_on',
-        'is_available',
     ];
+
+    /**
+     * @return BelongsTo
+     * @author Abdullah Hegab
+     */
+    public function client(): BelongsTo
+    {
+        return $this->belongsTo(Client::class);
+    }
+
+    /**
+     * @return BelongsTo
+     * @author Abdullah Hegab
+     */
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

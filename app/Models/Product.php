@@ -14,5 +14,12 @@ class Product extends Model
         'type',
         'description',
         'capacity',
+        'is_available',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
 }

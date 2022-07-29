@@ -16,4 +16,9 @@ class Client extends Model
         'passport_num',
         'gender',
     ];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

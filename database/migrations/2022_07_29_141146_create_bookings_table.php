@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('client_id')->nullable();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->dateTime('booked_on')->useCurrent();
-            $table->boolean('is_available')->default(true);
             $table->foreign('client_id')->references('id')->on('clients');
             $table->foreign('product_id')->references('id')->on('products');
             $table->timestamps();
