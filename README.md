@@ -29,9 +29,6 @@ this is a solution for A tour company has a range of products. Excursions, Custo
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Deployed Version
-* [Live](http://awesomesoftware.great-site.net/)
-
 ## My process
 1) Clone the project
 
@@ -68,7 +65,7 @@ this is a solution for A tour company has a range of products. Excursions, Custo
 ### Built with
 
 * [Laravel](https://laravel.com/)
-* [RestAPI]()
+* [Postgres](https://www.postgresql.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
